@@ -34,7 +34,6 @@ input[type=text]:focus {
   width:30vh;
   -webkit-transition:0.4s ease-in-out;
   transition:0.4s ease-in-out;
-  margin-right:-1vh;
 }
 
 ::placeholder {
@@ -52,6 +51,6 @@ input[type=text]:focus {
 
 @media screen and (max-width: 500px) {
   input[type=text]:focus {
-    width:25vh;
+    width:22vh;
   }
 }
