@@ -50,10 +50,8 @@ input[type=text]:focus {
 }
 
 @media screen and (max-width: 500px) {
-  input[type=text] {
-    width:18vh;
-  }
   input[type=text]:focus {
     width:20vh;
+    box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.575), 0 6px 20px 0 rgba(165, 152, 152, 0.123);
   }
 }
