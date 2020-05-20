@@ -17,7 +17,7 @@
   float: right;
 }
 input[type=text] {
-  height:8vh;
+  height:4vh;
   width:20vh;
   box-sizing: border-box;
   border: 2px solid rgb(255, 255, 255);
@@ -26,6 +26,8 @@ input[type=text] {
   color: aliceblue;
   background-color: rgb(201, 42, 42);
   padding: 12px 20px 12px 20px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
 
 input[type=text]:focus {
