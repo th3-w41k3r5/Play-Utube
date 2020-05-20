@@ -6,9 +6,7 @@ function Header() {
     return (
         <div class="header">
             <img src={logo} className="logo" alt="logo" />
-            <div class="header-right">
-                <Search/>               
-            </div>
+            <Search/>               
         </div>
     )
 }
