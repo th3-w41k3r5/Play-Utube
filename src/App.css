@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+}
+* {box-sizing: border-box;}
+.header {
+  overflow: hidden;
+  background-color: #cf1717;
+  padding:2vh;
+  padding-bottom: 1vh;
+}
+.header img{
+  float:left;
+  height:8vh;
+  width:8vh;
+}
+.header-right {
+  float: right;
+}
+input[type=text] {
+  width:20vh;
+  box-sizing: border-box;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 4px;
+  font-size:2vh;
+  color: aliceblue;
+  background-color: rgb(201, 42, 42);
+  padding: 12px 20px 12px 20px;
+}
+
+input[type=text]:focus {
+  width:30vh;
+  -webkit-transition:0.4s ease-in-out;
+  transition:0.4s ease-in-out;
+  margin-right:-1vh;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: right;
+  } 
+  .header-right {
+    float: right;
+  }
+}
