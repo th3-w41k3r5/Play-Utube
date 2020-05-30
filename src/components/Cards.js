@@ -3,12 +3,12 @@ import React from 'react'
 function Cards({image,title,videoId}) {
     console.log(image);
     const design={
-        'padding':'1vh'
+        'padding':'0 1vh 0 2vh',
     }
     return (
         <div className="cards-container">
             <img src={image} className="cardImage"/>
-            <h4 style={design}>{title}</h4>           
+            <h5 style={design}>{title}</h5>           
         </div>
     )
 }

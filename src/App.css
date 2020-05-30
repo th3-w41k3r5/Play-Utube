@@ -62,7 +62,7 @@ box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
   padding:1vh;
   float :right;    
   right:2vh;
-  vertical-align: middle;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 500px) {
