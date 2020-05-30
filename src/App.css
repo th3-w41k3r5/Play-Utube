@@ -1,7 +1,4 @@
-.App {
-  text-align: center;
-}
-* {box-sizing: border-box;}
+
 .header {
   overflow: hidden;
   background-color: #cf1717;
@@ -17,7 +14,7 @@
   float: right;
 }
 input[type=text] {
-  height:4vh;
+  height:5vh;
   width:20vh;
   box-sizing: border-box;
   border: 2px solid rgb(255, 255, 255);
@@ -48,10 +45,33 @@ input[type=text]:focus {
 ::-ms-input-placeholder { /* Microsoft Edge */
  color: white;
 }
+.cards-container{
+ min-width:50%;
+  min-height:12vh;
+  border: 1px solid;
+  border-radius: 2vh;
+  margin: 2vh 25% 1vh 25%;
+  -webkit-box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
+-moz-box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
+box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
+}
+.cardImage
+{
+  width:10vh;
+  height:10vh;
+  padding:1vh;
+  float :right;    
+  right:2vh;
+  vertical-align: middle;
+}
 
 @media screen and (max-width: 500px) {
   input[type=text]:focus {
-    width:20vh;
+    width:23vh;
     box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.575), 0 6px 20px 0 rgba(165, 152, 152, 0.123);
+  }
+  .cards-container{
+    margin: 2vh 10% 1vh 10%;
+    width:80%;
   }
 }
