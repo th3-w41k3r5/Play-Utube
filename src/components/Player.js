@@ -1,11 +1,27 @@
-import React from 'react'
+import React,{ useContext } from 'react'
 import ReactPlayer from 'react-player'
 
-function Player() {
+import { TitleContext, IdContext, ImageContext, ChannelContext }
+  from './VideoContext';
+
+function Player() { 
+
+  const { title, setTitle } = useContext(TitleContext);
+  const { id, setId } = useContext(IdContext);
+  const { image, setImage } = useContext(ImageContext);
+  const { channel, setChannel } = useContext(ChannelContext);
+
+  const url = `https://www.youtube.com/watch?v=${id}`;
+  console.log(url);
   
+  
+
   return (
-    <div style={{'display':'none'}}>
-      <ReactPlayer url='https://www.youtube.com/watch?v=ysz5S6PUM-U' playing />
+    <div>
+      <div style={{'display':'none'}}>
+        <ReactPlayer url={url} playing />
+      </div>
+      <img src={image} className="playerImage"/>
     </div>
   )
 }

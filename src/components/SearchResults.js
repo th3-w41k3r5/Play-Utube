@@ -23,7 +23,7 @@
                         console.log(error)
                     })
             },[query])
-            /*useEffect(() => {
+           /* useEffect(() => {
                 console.log(posts); 
              }, [posts]);*/
             
@@ -33,9 +33,10 @@
                     <div>
                         {
                             <Cards 
-                            title={post.snippet.title} 
-                            videoid={post.id.videoId} 
-                            image={post.snippet.thumbnails.high.url}/>
+                            Title={post.snippet.title} 
+                            VideoId={post.id.videoId} 
+                            Image={post.snippet.thumbnails.high.url}
+                            channelTitle={post.snippet.channelTitle}/>
                         }
                     </div>)
                 }
