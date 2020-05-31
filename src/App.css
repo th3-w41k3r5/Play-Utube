@@ -4,6 +4,8 @@
   background-color: #cf1717;
   padding:2vh;
   padding-bottom: 1vh;
+  top: 0vh;
+  position: sticky;
 }
 .header img{
   float:left;
@@ -63,6 +65,7 @@ box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
   float :right;    
   right:2vh;
   margin: 0 auto;
+  border-radius: 2vh;
 }
 
 @media screen and (max-width: 500px) {
@@ -71,7 +74,7 @@ box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
     box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.575), 0 6px 20px 0 rgba(165, 152, 152, 0.123);
   }
   .cards-container{
-    margin: 2vh 10% 1vh 10%;
-    width:80%;
+    margin: 2vh 5% 1vh 5%;
+    width:90%;
   }
 }

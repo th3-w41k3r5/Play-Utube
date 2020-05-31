@@ -12,7 +12,7 @@
                     "params":{
                         'part':'snippet',
                         'maxResults':'10',
-                        'key':'AIzaSyAiZHbhbpGJovMg4a5r-NdIG0rJ7gz5Gek',
+                        'key':'AIzaSyCnAEHwC5oNcjza1jopFVC1FTDOWIqiT_Y',
                         'q':query
                     }
                 })
@@ -23,9 +23,9 @@
                         console.log(error)
                     })
             },[query])
-            useEffect(() => {
+            /*useEffect(() => {
                 console.log(posts); 
-             }, [posts]);
+             }, [posts]);*/
             
             return (
                 <div>

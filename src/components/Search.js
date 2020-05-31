@@ -9,7 +9,7 @@ function Search() {
     return (
         <div className="header-right">
             <input type="text" name="search" placeholder="Search.." value={query} onChange={e => setQuery(e.target.value)}/>
-            <Link to={"/query="+query}>
+            <Link to={"/search="+query}>
                 <img src={search} style={design} alt="search" />
             </Link>
 
