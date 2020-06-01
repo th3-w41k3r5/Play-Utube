@@ -77,7 +77,7 @@ box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
     margin: 2vh 5% 1vh 5%;
     width:90%;
   }
-  .playerImage
+  #playerImage
   {
     width:20vh;
     height:20vh;
@@ -85,7 +85,9 @@ box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
     display:block;
     margin:auto;
     margin-top:10vh;
-    animation: rotation 5s infinite linear;
+  }
+  .rotate{
+    animation: rotation 10s infinite linear;
   }
   @keyframes rotation {
     from {
