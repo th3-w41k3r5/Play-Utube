@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect} from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import ReactPlayer from 'react-player'
 
 import Play from './Play'
@@ -18,7 +18,7 @@ function Player() {
   const [playing, setPlaying] = useState(false)
   const [rotate, setRotate] = useState(false)
 
-//Play
+  //Play
   const handlePlay = () => {
     setPlaying(true)
     setRotate(true)
@@ -38,12 +38,22 @@ function Player() {
   }
 
   return (
-    <div>
+    <div className="player">
       <div style={{ 'display': 'none' }}>
         <ReactPlayer url={url} playing={playing} />
       </div>
-      <img src={image} id="playerImage" className={rotate ? "rotate" : ""}/>
-      <button onClick={handlePlayPause}>{playing ? 'Pause' : 'Play'}</button>
+      <img src={image} id="playerImage" className={rotate ? "rotate" : ""} />
+        <div className='songData'>
+          <span style={{marginLeft:'-4vh'}}>Song :&nbsp;</span>
+          <b>{title}</b>
+        </div>
+        <div className='songData'>
+          <span style={{marginLeft:'-4vh'}}>Channel :&nbsp;</span>
+          <b>{channel}</b>
+        </div>
+      <div onClick={handlePlayPause} className="playPause">
+        {playing ? <Pause /> : <Play />}
+      </div>
     </div>
   )
 }
