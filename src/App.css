@@ -66,10 +66,26 @@ box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
   margin: 0 auto;
   border-radius: 2vh;
 }
-.player
+.playerdark
 {
+  border: 2px solid #212121;
+  margin:5vh 50vh 0 50vh;
+  background: #212121;
+  color: #ffffff ;
+  border-radius: 1vh;
+}
+.playerlight
+{
+  border-radius: 1vh;
   border: 2px solid rgb(201, 42, 42);
   margin:5vh 50vh 0 50vh;
+  background: #ffffff;
+  color: #212121;
+}
+.themeIcon{
+height:5vh;
+width: 5vh;
+margin:1vh 0 0 3vh;
 }
 #playerImage
   {
@@ -104,6 +120,7 @@ box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
   margin:auto;
   width: 10vh;
   height:10vh;
+  padding-bottom: 2vh;
 }
 
 /*For Mobiles */ 
@@ -116,7 +133,20 @@ box-shadow: 3px 3px 12px 1px rgba(107,102,107,1);
     margin: 2vh 5% 1vh 5%;
     width:90%;
   }
-  .player{
+  .playerdark {
     margin:2vh 5vh 0 5vh;
   }
+  .playerlight{
+    margin:2vh 5vh 0 5vh;
+  }
+  .themeIcon{
+    height:4vh;
+    width: 4vh;
+    margin:1vh 0 -1vh 1vh;
+    }
+    .playPause
+    {
+      width: 6vh;
+      height:6vh;
+    }
 }
