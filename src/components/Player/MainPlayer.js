@@ -3,8 +3,11 @@ import ReactPlayer from 'react-player'
 
 import Play from './Play'
 import Pause from './Pause'
+import Previous from './Previous'
+import Next from './Next'
 import Dark from './Dark'
 import Light from './Light'
+import SeekBar from './SeekBar'
 import { TitleContext, IdContext, ImageContext, ChannelContext }
   from '../VideoContext';
 
@@ -20,9 +23,10 @@ function Player() {
   const [playing, setPlaying] = useState(false)
   const [rotate, setRotate] = useState(false)
   const [dark, setDark] = useState(false)
-  const [played,setPlayed] = useState(0)
-  const [loaded,setLoaded] = useState(0)
-  const [seeking,setSeeking] = useState(false)
+  const [played, setPlayed] = useState(0.00)
+  const [duration, setDuration] = useState(0.0)
+  /*const [loaded,setLoaded] = useState(0)
+  const [seeking,setSeeking] = useState(false)*/
 
   //Play
   const handlePlay = () => {
@@ -52,20 +56,21 @@ function Player() {
     }
   }
 
-  /*const handleProgress = () => {
-    if (!seeking) {
-      played()
-    }
-  }*/
-  const player = useRef(null);
+  const musicPlayer = useRef(null);
   return (
     <div className={dark ? "playerlight" : "playerdark"}>
-      <div style={{ 'display': 'none' }}>
-        <ReactPlayer ref={player} url={url} playing={playing} onReady={handlePlayPause}/>
-      </div>
+
       <div onClick={toggleTheme} className="themeIcon">
         {dark ? <Dark /> : <Light />}
       </div>
+
+      <div style={{ 'display': 'none' }}>
+        <ReactPlayer ref={musicPlayer} url={url} playing={playing}
+          onReady={handlePlayPause} onEnded={handlePause}
+          onProgress={e => { setPlayed(e.played) }}
+          onDuration={e => { setDuration(e / 60) }} />
+      </div>
+
       <img src={image} id="playerImage" className={rotate ? "rotate" : ""} />
 
       <div className='songData'>
@@ -78,9 +83,14 @@ function Player() {
       </div>
       <div>
 
+        <SeekBar played={played} duration={duration} />
       </div>
-      <div onClick={handlePlayPause} className="playPause">
-        {playing ? <Pause /> : <Play />}
+      <div>
+        <Previous/>
+        <Next/>
+        <div onClick={handlePlayPause} className="playPause">
+          {playing ? <Pause /> : <Play />}
+        </div>
       </div>
     </div>
   )
