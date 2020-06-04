@@ -66,13 +66,11 @@ function Player() {
 
       <div style={{ 'display': 'none' }}>
         <ReactPlayer ref={musicPlayer} url={url} playing={playing}
-          onReady={handlePlayPause} onEnded={handlePause}
+          onReady={handlePlay} onEnded={handlePause}
           onProgress={e => { setPlayed(e.playedSeconds) }}
           onDuration={e => { setDuration(e) }} 
           onSeek={e => console.log(e)}/>
       </div>
-  {//musicPlayer.getCurrentTime() 
-  }
       <img src={image} id="playerImage" className={rotate ? "rotate" : ""} />
 
       <div className='songData'>

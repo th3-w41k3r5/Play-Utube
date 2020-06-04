@@ -17,14 +17,14 @@ function SeekBar({ played, duration,setPlayed }) {
     var newPlayed = secToHHMMSS(Math.round(played));
     var newDuration = secToHHMMSS(duration);
     return (
-        <div style={{ marginBottom: '5vh' }}>
+        <div style={{ marginBottom: '10vh' }}>
 
-            <input style={{ width: '90%', margin: '0 5% 0 5%', height: '2vh' }} 
+            <input style={{ width: '90%', margin: '0 5% 0 5%', height: '2px',borderRadius:'10%' }} className="slider"
             type='range' min={0} value={Math.round(played)} max={duration} 
             onChange={e => setPlayed(e.target.value)}/>
 
-            <span style={{ float: 'left', marginLeft: '5%' }}>{newPlayed}</span>
-            <span style={{ float: 'right', marginRight: '5%' }}>{newDuration}</span>
+            <span style={{ float: 'left', marginLeft: '5%', marginTop:'3%' }}>{newPlayed}</span>
+            <span style={{ float: 'right', marginRight: '5%', marginTop:'3%' }}>{newDuration}</span>
         </div>
     )
 }
