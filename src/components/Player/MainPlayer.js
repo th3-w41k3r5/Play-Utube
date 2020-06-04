@@ -25,8 +25,8 @@ function Player() {
   const [dark, setDark] = useState(false)
   const [played, setPlayed] = useState(0.00)
   const [duration, setDuration] = useState(0.0)
-  /*const [loaded,setLoaded] = useState(0)
-  const [seeking,setSeeking] = useState(false)*/
+  /*const [loaded,setLoaded] = useState(0)*/
+  const [seeking,setSeeking] = useState(false)
 
   //Play
   const handlePlay = () => {
@@ -67,10 +67,12 @@ function Player() {
       <div style={{ 'display': 'none' }}>
         <ReactPlayer ref={musicPlayer} url={url} playing={playing}
           onReady={handlePlayPause} onEnded={handlePause}
-          onProgress={e => { setPlayed(e.played) }}
-          onDuration={e => { setDuration(e / 60) }} />
+          onProgress={e => { setPlayed(e.playedSeconds) }}
+          onDuration={e => { setDuration(e) }} 
+          onSeek={e => console.log(e)}/>
       </div>
-
+  {//musicPlayer.getCurrentTime() 
+  }
       <img src={image} id="playerImage" className={rotate ? "rotate" : ""} />
 
       <div className='songData'>
@@ -82,8 +84,8 @@ function Player() {
         <b>{channel}</b>
       </div>
       <div>
+        <SeekBar played={played} duration={duration} setPlayed={setPlayed}/>
 
-        <SeekBar played={played} duration={duration} />
       </div>
       <div>
         <Previous/>
