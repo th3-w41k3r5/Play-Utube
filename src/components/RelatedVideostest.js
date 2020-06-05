@@ -7,6 +7,7 @@ import {IdContext}
 
 function RelatedVideos() {
 
+    const { id, setId } = useContext(IdContext);
     const generateKey = () =>{
         const keys = ["AIzaSyDch-RqydDFu7FJluTqGKpWjD_SNyTU7_g",
                         "AIzaSyBC6-Ii5nRBnXyS8jB4nv_AK6UeoyqPMks",
@@ -27,7 +28,7 @@ function RelatedVideos() {
              "method": "GET",
              "url": 'https://www.googleapis.com/youtube/v3/search',
              "params":{
-                "relatedToVideoId": `${IdContext}`,
+                "relatedToVideoId": id,
                 'part':'snippet',
                 "type":"video",
                  'maxResults':'20',
@@ -48,7 +49,7 @@ function RelatedVideos() {
 
 
     return (
-        <div style={{display:'hidden'}}>
+        <div>
             {relatedPosts.map((post) =>
                     <div key={post.etag}>
                         {

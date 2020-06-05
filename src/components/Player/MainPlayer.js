@@ -11,7 +11,7 @@ import SeekBar from './SeekBar'
 import { TitleContext, IdContext, ImageContext, ChannelContext }
   from '../VideoContext';
 
-import RelatedVideos from '../RelatedVideos'
+import ComingNext from './ComingNext'
 
 function Player() {
 
@@ -59,7 +59,9 @@ function Player() {
   }
 
   const musicPlayer = useRef(null);
+  
   return (
+    <>
     <div className={dark ? "playerlight" : "playerdark"}>
 
       <div onClick={toggleTheme} className="themeIcon">
@@ -96,7 +98,8 @@ function Player() {
       </div>
 
     </div>
+    <ComingNext/>
+    </>
   )
 }
-
 export default Player

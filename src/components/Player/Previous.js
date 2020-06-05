@@ -4,7 +4,7 @@ import previous from '../logo/previous.png';
 function Previous() {
     return (
         <div>
-            <img src={previous} className="previous"/>
+            <img src={previous} className="previous" alt="previous"/>
         </div>
     )
 }

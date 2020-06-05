@@ -16,7 +16,7 @@
                         "AIzaSyALwRCd9dZVzA8HtDxFkp1pAjl-s1jhOyg",
                         "AIzaSyBqTrEMWCy-zaxM8FZD8cOoe0TVTrRtNps"]
                 const index = Math.floor(Math.random() * Math.floor(keys.length));
-                return keys[0]
+                return keys[index]
             }
 
             const query = props.match.params.query;

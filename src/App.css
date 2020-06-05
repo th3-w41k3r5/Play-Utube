@@ -5,6 +5,7 @@
   padding-bottom: 1vh;
   top: 0vh;
   position: sticky;
+  z-index: 99;
 }
 .header img{
   float:left;
@@ -124,15 +125,16 @@ margin:1vh 0 0 3vh;
   margin:auto;
   width: 8vh;
   height:8vh;
-  padding-bottom: 2vh;
+  padding-bottom: 5vh;
   cursor: pointer;
+ 
 }
 .previous
 {
   float:left;
   width: 8vh;
   height:8vh;
-  padding-bottom: 2vh;
+  padding-bottom: 5vh;
   margin-left: 10vh;
   cursor: pointer;
 }
@@ -141,7 +143,7 @@ margin:1vh 0 0 3vh;
   float:right;
   width: 8vh;
   height:8vh;
-  padding-bottom: 2vh;
+  padding-bottom: 5vh;
   margin-right: 10vh;
   cursor: pointer;
 }
@@ -164,7 +166,52 @@ margin:1vh 0 0 3vh;
   cursor: pointer;
   box-shadow: -400px 0 0 400px rgb(179, 60, 60);
 }
-
+.comingnext
+{
+  height: 8vh; 
+  position: absolute; 
+  bottom:0%;
+  width:100%; 
+  background-color: rgb(170, 31, 31); 
+  opacity: 5;
+  overflow: hidden;
+}
+.comingnext .container{
+  margin-left: 20vh;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  color:rgb(226, 218, 218);
+  text-align: center;
+}
+.comingnext .related{
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  float:right;
+  right:10vh;
+  margin:1vh 0 0 0;
+  cursor: pointer;
+}
+.related img{
+  width:5vh;
+  height:5vh;
+}
+.comingnext .songlist{
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  float:left;
+  left:10vh;
+  margin:1vh 0 0 0;
+}
+.songlist img{
+  width:5vh;
+  height:5vh;
+}
 /*For Mobiles */ 
 @media screen and (max-width: 500px) {
   input[type=text]:focus {
@@ -200,5 +247,21 @@ margin:1vh 0 0 3vh;
       width: 6vh;
       height:6vh;
       margin-right: 4vh;
+    }
+    .comingnext{
+      width:98%;
+      height:10vh;
+      margin:0 1% 0 1%;
+      border-radius: 5px;
+    }
+    .comingnext .container{
+      margin-left: 8vh;
+    }
+    .comingnext .related
+    {
+      right:2vh;
+    }
+    .comingnext .songlist{
+      margin-left: -8vh;
     }
 }
