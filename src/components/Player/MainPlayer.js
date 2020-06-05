@@ -11,6 +11,8 @@ import SeekBar from './SeekBar'
 import { TitleContext, IdContext, ImageContext, ChannelContext }
   from '../VideoContext';
 
+import RelatedVideos from '../RelatedVideos'
+
 function Player() {
 
   const { title, setTitle } = useContext(TitleContext);
@@ -82,7 +84,7 @@ function Player() {
         <b>{channel}</b>
       </div>
       <div>
-        <SeekBar played={played} duration={duration} setPlayed={setPlayed}/>
+        <SeekBar played={played} duration={duration} setPlayed={setPlayed} musicPlayer={musicPlayer}/>
 
       </div>
       <div>
@@ -92,20 +94,9 @@ function Player() {
           {playing ? <Pause /> : <Play />}
         </div>
       </div>
+
     </div>
   )
 }
 
 export default Player
-/*
-<input
-          type='range' min={0} max={0.999999} step='any'
-          value={played}
-          onMouseDown={e => setSeeking(true)}
-          onChange={e => setPlayed(parseFloat(e.target.value))}
-          onMouseUp={ef =>{setSeeking(false);player.seekTo(parseFloat(ef.target.value))}}
-        />
-        <br/>
-      <progress max={1} value={played} />
-      <br/>
-      <progress max={1} value={loaded} />*/

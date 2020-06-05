@@ -5,18 +5,18 @@
         function SearchResults(props) {
 
             const generateKey = () =>{
-               const keys = ["AIzaSyDvXb-RT65_cl1TkYAk3BmoyuDGTP3_oS8",
-                        "AIzaSyBy1eHAlCEilmTSEqd8PK6jeqFYaVDnvkk",
-                        "AIzaSyCZ-QbCBHxQswG0uz8-Z4u17HwP8FOtsig",
-                        "AIzaSyAJjb1HjqMS9XwXEZxFBuRKwI25NZzuOm4",
-                        "AIzaSyCK0s3cpZW3QnFHR3b2cHjDeTC3sVUu3bQ",
-                        "AIzaSyDiFu2lA-k8uN4PzdhPx2Tl-5Qvn1Y24-I",
-                        "AIzaSyANnx2SVuZoiwotFd62C3GhGnRIjW-PUew",
-                        "AIzaSyCh0mrGYgicLPLHryxbGSuH8SXz4wk2gfI",
-                        "AIzaSyAcDErof3D1d4wMk1HaFApVfCQ1g2LGNlY",
-                        "AIzaSyDkhCD06Ua3mjvGgVIo1B1PhJ5WYxktH80",]
+               const keys = ["AIzaSyDch-RqydDFu7FJluTqGKpWjD_SNyTU7_g",
+                        "AIzaSyBC6-Ii5nRBnXyS8jB4nv_AK6UeoyqPMks",
+                        "AIzaSyCIjOIitWjaPlJtNL5msTiJwESLGbj_s9Y",
+                        "AIzaSyAu9mk-t55iTO3xyemRKfkc2pv1-irtReg",
+                        "AIzaSyBi-6S-oZiVw2i7i_Wgxgg0YPX-3WmTkGw",
+                        "AIzaSyCPiSc6cW6ffJGilLse7XTzeWLFkCVXxtQ",
+                        "AIzaSyDKllLC2B8-Xb9hXomsM1lytbTiDhiiE58",
+                        "AIzaSyD1gf2gCUFD-jRPvkYNSfBp6_0m1QByjbE",
+                        "AIzaSyALwRCd9dZVzA8HtDxFkp1pAjl-s1jhOyg",
+                        "AIzaSyBqTrEMWCy-zaxM8FZD8cOoe0TVTrRtNps"]
                 const index = Math.floor(Math.random() * Math.floor(keys.length));
-                return keys[index]
+                return keys[0]
             }
 
             const query = props.match.params.query;

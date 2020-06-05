@@ -1,6 +1,6 @@
-        import React from 'react'
+        import React, { useEffect } from 'react'
 
-        function SeekBar({ played, duration,setPlayed }) {
+        function SeekBar({ played, duration,setPlayed,musicPlayer }) {
             
             const secToHHMMSS = (secs) => {
 
@@ -16,10 +16,11 @@
             }
             var newPlayed = secToHHMMSS(Math.round(played));
             var newDuration = secToHHMMSS(duration);
+
             return (
                 <div style={{ marginBottom: '10vh' }}>
 
-                    <input style={{ width: '90%', margin: '0 5% 0 5%',borderRadius:'10%' }} className="range"
+                    <input style={{ width: '90%', margin: '0 5% 0 5%',borderRadius:'10%' }} className="range outer"
                     type='range' min={0} value={Math.round(played)} max={duration} 
                     onChange={e => setPlayed(e.target.value)}/>
 
