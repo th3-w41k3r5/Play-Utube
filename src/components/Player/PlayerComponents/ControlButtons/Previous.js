@@ -1,5 +1,5 @@
 import React from 'react'
-import previous from '../logo/previous.png';
+import previous from '../../../logo/previous.png';
 
 function Previous() {
     return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import dark from '../logo/dark moon.png';
+import dark from '../../logo/dark moon.png';
 
 function Dark() {
     return (

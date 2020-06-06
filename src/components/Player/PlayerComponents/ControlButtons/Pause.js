@@ -1,5 +1,5 @@
 import React from 'react'
-import pause from '../logo/pause.png';
+import pause from '../../../logo/pause.png';
 
 function Pause() {
     return (

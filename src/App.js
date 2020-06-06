@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 import Header from './components/Header'
 import SearchResults from './components/SearchResults'
-import Player from './components/Player/MainPlayer'
+import Player from './components/Player/PlayerComponents/MainPlayer'
 import './App.css';
 
 import { TitleContext, IdContext, ImageContext, ChannelContext }

@@ -1,5 +1,5 @@
 import React from 'react'
-import next from '../logo/next.png';
+import next from '../../../logo/next.png';
 
 function Next() {
     return (

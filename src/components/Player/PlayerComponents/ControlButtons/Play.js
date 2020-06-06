@@ -1,5 +1,5 @@
 import React from 'react'
-import play from '../logo/play.png';
+import play from '../../../logo/play.png';
 
 function Play() {
     return (

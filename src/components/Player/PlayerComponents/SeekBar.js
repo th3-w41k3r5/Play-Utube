@@ -18,14 +18,14 @@
             var newDuration = secToHHMMSS(duration);
 
             return (
-                <div style={{ marginBottom: '10vh' }}>
+                <div style={{ marginBottom: '7vh' }}>
 
                     <input style={{ width: '90%', margin: '0 5% 0 5%',borderRadius:'10%' }} className="range outer"
                     type='range' min={0} value={Math.round(played)} max={duration} 
                     onChange={e => setPlayed(e.target.value)}/>
 
-                    <span style={{ float: 'left', marginLeft: '5%', marginTop:'3%' }}>{newPlayed}</span>
-                    <span style={{ float: 'right', marginRight: '5%', marginTop:'3%' }}>{newDuration}</span>
+                    <span style={{ float: 'left', marginLeft: '5%', marginTop:'2%' }}>{newPlayed}</span>
+                    <span style={{ float: 'right', marginRight: '5%', marginTop:'2%' }}>{newDuration}</span>
                 </div>
             )
         }

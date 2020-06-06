@@ -1,17 +1,17 @@
 import React, { useContext, useState, useRef } from 'react'
 import ReactPlayer from 'react-player'
 
-import Play from './Play'
-import Pause from './Pause'
-import Previous from './Previous'
-import Next from './Next'
-import Dark from './Dark'
-import Light from './Light'
+import Play from './ControlButtons/Play'
+import Pause from './ControlButtons/Pause'
+import Previous from './ControlButtons/Previous'
+import Next from './ControlButtons/Next'
+import Dark from '../ThemeComponents/Dark'
+import Light from '../ThemeComponents/Light'
 import SeekBar from './SeekBar'
 import { TitleContext, IdContext, ImageContext, ChannelContext }
-  from '../VideoContext';
+  from '../../VideoContext';
 
-import ComingNext from './ComingNext'
+import ComingNext from './ComingNext/ComingNext'
 
 function Player() {
 

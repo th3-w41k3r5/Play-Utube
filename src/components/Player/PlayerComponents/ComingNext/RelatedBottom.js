@@ -1,5 +1,5 @@
 import React from 'react'
-import relatedBottom from '../logo/related bottom.png';
+import relatedBottom from '../../../logo/related bottom.png';
 
 function RelatedBottom() {
     return (
