@@ -1,26 +1,20 @@
 import React,{useEffect,useState,useContext} from 'react'
 import axios from 'axios'
 import RelatedCards from './RelatedCards'
+import keys from '../../../Keys'
 
-import {IdContext}
+import {IdContext,RelatedVideoContext}
   from '../../../VideoContext';
 
 function RelatedVideos() {
 
-    const { id, setId } = useContext(IdContext);
-    console.log(id);
-    
+    const { id, setId } = useContext(IdContext);  
+    const {relatedVideos, setRelatedVideos} = useContext(RelatedVideoContext); 
     const generateKey = () =>{
-        const keys = ["AIzaSyAF9DkUHNvZ_HVDxYxngmXfedKmByaJIsE",
-            "AIzaSyB5HxiGqJBFXt-aMbdpt0BIxKAoncYGMCg",
-            "AIzaSyClRytEfkUCo34JihypH2_BA3i4edw7Ppw",
-            "AIzaSyAS847jt1lOgP8cEK2SxT3beuT4Xho3qMA",
-            "AIzaSyBisEIECJyu8uYvKIzqD4atlnVFuRKQUAE",
-            "AIzaSyDg_b70fiilcQ86joYVk8qHfrSfhJPUp6s"]
          const index = Math.floor(Math.random() * Math.floor(keys.length));
          return keys[index]
      }
-     const [relatedPosts, setRelatedPosts] = useState([])
+     //const [relatedPosts, setRelatedPosts] = useState([])
      useEffect(() => {
          axios({
              "method": "GET",
@@ -35,23 +29,22 @@ function RelatedVideos() {
              }
          })
              .then((res) => {
-                setRelatedPosts(res.data.items);                                 
+                setRelatedVideos(res.data.items);                                 
              })
              .catch((error) => {
                  console.log(error)
              })
      },[])
-     useEffect(() => {
-         console.log(relatedPosts); 
-      }, [relatedPosts]);
-
 
     return (
         <div className='relatedCardsContainer'>
-            {relatedPosts.map((post) =>
+            {relatedVideos.map((post) =>
                     <div key={post.etag}>
                         {
-                            <RelatedCards name={post.snippet.title}/>
+                            <RelatedCards SongName={post.snippet.title}
+                            SongId={post.id.videoId}
+                            SongImage={post.snippet.thumbnails.high.url}
+                            ChannelTitle={post.snippet.channelTitle}/>
                         }
                     </div>)
                 }

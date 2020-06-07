@@ -1,16 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import Cards from './Cards'
+import keys from './Keys'
 
 function SearchResults(props) {
 
     const generateKey = () => {
-        const keys = ["AIzaSyAF9DkUHNvZ_HVDxYxngmXfedKmByaJIsE",
-            "AIzaSyB5HxiGqJBFXt-aMbdpt0BIxKAoncYGMCg",
-            "AIzaSyClRytEfkUCo34JihypH2_BA3i4edw7Ppw",
-            "AIzaSyAS847jt1lOgP8cEK2SxT3beuT4Xho3qMA",
-            "AIzaSyBisEIECJyu8uYvKIzqD4atlnVFuRKQUAE",
-            "AIzaSyDg_b70fiilcQ86joYVk8qHfrSfhJPUp6s"]
         const index = Math.floor(Math.random() * Math.floor(keys.length));
         return keys[index]
     }
@@ -23,7 +18,7 @@ function SearchResults(props) {
             "url": 'https://www.googleapis.com/youtube/v3/search',
             "params": {
                 'part': 'snippet',
-                'maxResults': '10',
+                'maxResults': '50',
                 'key': generateKey(),
                 'q': query
             }

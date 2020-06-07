@@ -78,7 +78,7 @@ function Player() {
       <img src={image} id="playerImage" className={rotate ? "rotate" : ""} />
 
       <div className='songData'>
-        <span style={{ marginLeft: '-4vh' }}>Song :&nbsp;</span>
+        <span style={{ marginLeft: '-4vh',marginRight:'2vh' }}>Song :&nbsp;</span>
         <b>{title}</b>
       </div>
       <div className='songData'>
