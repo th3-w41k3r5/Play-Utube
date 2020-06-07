@@ -5,7 +5,7 @@ function Search() {
     const design = {
         'float': 'right'
     }
-    const [query, setQuery] = useState('sooraj dooba hai yaro');
+    const [query, setQuery] = useState('');
     return (
         <div className="header-right">
             <input type="text" name="search" placeholder="Search.." value={query} onChange={e => setQuery(e.target.value)}/>

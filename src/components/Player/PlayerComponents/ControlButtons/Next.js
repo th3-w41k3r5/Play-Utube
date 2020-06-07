@@ -2,7 +2,7 @@ import React, { useState, useContext } from 'react'
 import { Redirect } from 'react-router-dom'
 
 import next from '../../../logo/next.png';
-import { RelatedVideoContext, TitleContext, IdContext, ImageContext, ChannelContext}
+import { RelatedVideoContext, TitleContext, IdContext, ImageContext, ChannelContext, CurrentIndexContext }
     from '../../../VideoContext';
 
 function Next() {
@@ -11,32 +11,38 @@ function Next() {
     const { image, setImage } = useContext(ImageContext);
     const { channel, setChannel } = useContext(ChannelContext);
     const { relatedVideos, setRelatedVideos } = useContext(RelatedVideoContext);
-    //const { songIndex, setSongIndex } = useContext(CurrenntIndexContext);
-    
+    const { currentSongIndex, setCurrentSongIndex } = useContext(CurrentIndexContext);
+
     const [player, setPlayer] = useState(false);
-    
+
     const nextPlay = () => {
         var keys = Object.keys(relatedVideos);
         var last = keys[keys.length - 1];
-        
-      
 
-        var songName = relatedVideos[last].snippet.title;
-        var songId = relatedVideos[last].id.videoId;
-        var songImage = relatedVideos[last].snippet.thumbnails.high.url;
-        var channelTitle = relatedVideos[last].snippet.channelTitle
+        setCurrentSongIndex(currentSongIndex + 1);
 
-        setTitle(songName);
-        setId(songId);
-        setImage(songImage);
-        setChannel(channelTitle);
+        if (currentSongIndex > last) {
+            alert("No more Song to Play");
+        }
         
-        setPlayer(true)
+        else {
+            var songName = relatedVideos[currentSongIndex].snippet.title;
+            var songId = relatedVideos[currentSongIndex].id.videoId;
+            var songImage = relatedVideos[currentSongIndex].snippet.thumbnails.high.url;
+            var channelTitle = relatedVideos[currentSongIndex].snippet.channelTitle
+
+            setTitle(songName);
+            setId(songId);
+            setImage(songImage);
+            setChannel(channelTitle);
+
+            setPlayer(true)
+        }
     }
-   
+
     return (
         <div onClick={nextPlay}>
-            <img src={next} className="next"/>
+            <img src={next} className="next" />
         </div>
     )
 }

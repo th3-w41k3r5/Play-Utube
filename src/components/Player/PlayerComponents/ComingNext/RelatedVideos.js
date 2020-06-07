@@ -23,7 +23,7 @@ function RelatedVideos() {
                 "relatedToVideoId": id,
                 'part':'snippet',
                 "type":"video",
-                 'maxResults':'20',
+                 'maxResults':'30',
                  'key':generateKey(),
                  
              }
