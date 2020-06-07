@@ -1,6 +1,7 @@
         import React, { useEffect } from 'react'
 
-        function SeekBar({ played, duration,setPlayed,musicPlayer }) {
+        function SeekBar({ played, duration,setPlayed}) {
+            console.log(duration);
             
             const secToHHMMSS = (secs) => {
 
@@ -15,7 +16,7 @@
                 else if(hours !== 0){return `${pad(hours)}:${pad(minutes)}:${pad(secs)}`;}
             }
             var newPlayed = secToHHMMSS(Math.round(played));
-            var newDuration = secToHHMMSS(duration);
+            var newDuration = secToHHMMSS(Math.round(duration));
 
             return (
                 <div style={{ marginBottom: '7vh' }}>

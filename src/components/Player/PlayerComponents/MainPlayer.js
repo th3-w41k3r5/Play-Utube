@@ -25,8 +25,8 @@ function Player() {
   const [playing, setPlaying] = useState(false)
   const [rotate, setRotate] = useState(false)
   const [dark, setDark] = useState(false)
-  const [played, setPlayed] = useState(0.00)
-  const [duration, setDuration] = useState(0.0)
+  const [played, setPlayed] = useState(0)
+  const [duration, setDuration] = useState(0)
   /*const [loaded,setLoaded] = useState(0)*/
   const [seeking,setSeeking] = useState(false)
 
