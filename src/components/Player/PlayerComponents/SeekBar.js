@@ -1,8 +1,7 @@
         import React, { useEffect } from 'react'
 
         function SeekBar({ played, duration,setPlayed}) {
-            console.log(duration);
-            
+        
             const secToHHMMSS = (secs) => {
 
                 const pad = (num) => {

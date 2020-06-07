@@ -6,7 +6,7 @@ import SearchResults from './components/SearchResults'
 import Player from './components/Player/PlayerComponents/MainPlayer'
 import './App.css';
 
-import { TitleContext, IdContext, ImageContext, ChannelContext, RelatedVideoContext }
+import { TitleContext, IdContext, ImageContext, ChannelContext, RelatedVideoContext,CurrentIndexContext }
   from './components/VideoContext';
 
 function App() {
@@ -15,12 +15,14 @@ function App() {
   const [image, setImage] = useState('');
   const [channel, setChannel] = useState('');
   const [relatedVideos, setRelatedVideos] = useState([]);
+  const [currentSongIndex, setCurrentSongIndex] = useState(0);
   return (
     <TitleContext.Provider value={{ title, setTitle }}>
       <IdContext.Provider value={{ id, setId }}>
         <ImageContext.Provider value={{ image, setImage }}>
           <ChannelContext.Provider value={{ channel, setChannel }}>
             <RelatedVideoContext.Provider value={{ relatedVideos, setRelatedVideos }}>
+            <CurrentIndexContext.Provider value={{ currentSongIndex, setCurrentSongIndex }}>
               <Router>
                 <div>
                   <Header />
@@ -28,6 +30,7 @@ function App() {
                   <Route path='/player' component={Player} />
                 </div>
               </Router>
+              </CurrentIndexContext.Provider>
             </RelatedVideoContext.Provider>
           </ChannelContext.Provider>
         </ImageContext.Provider>

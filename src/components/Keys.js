@@ -1,23 +1,4 @@
-const keys = ["AIzaSyCgOYJPILNlgW49oWVCwX52prEZMdFdZRQ",
-"AIzaSyD8UgdKBc61FUl7IYApEVjghHkglNRc_m8",
-"AIzaSyAPuHImAtG1SoXXP8NKS1X_2k7mEUwJ3ds",
-"AIzaSyCPbcK_d89GRIkRZieIbvpELWGdCHxfK0c",
-"AIzaSyBT2x4xQi4lKH8ICffuDvKuLyvugHyQrq0",
-"AIzaSyDRSN-zGBpC27KT6BARJ6in2dtwkAGdMb0",
-"AIzaSyBt1Z-7lcT-fceEAPhbBsN1ZeVduYjDBK8",
-"AIzaSyCzGZd3STkQJIoKgUgZEicxrM1umsd9cWY",
-"AIzaSyBVrrQtLVc1DGj_WbkgJjVMFuDMPaxsQAc",
-"AIzaSyDs9UCw026Enk3ZKzkAIYaa97NF8ec61o8",
-
-"AIzaSyBphDGRAkvP9lMb_-Ek0au84BOwDLlN9rY",
-"AIzaSyBEMf65r9fuIiaEqyrt4dkpMSB8NCstdl4",
-"AIzaSyC16uBOgI4T6I-NLZCsOxLU1sqfaJ81Hyg",
-"AIzaSyAb9VTgkB9z6JL342GFSnyvb-Mw7abkXjU",
-"AIzaSyBrXTEKAwf7Rt3xd-DN-MN7VSCEoYCjl3c",
-"AIzaSyDyHocz91ULV3CkvWWg2Zp3z2kQKndewGg",
-"AIzaSyBPYixbYWk_2Jo3mrDfBEt8GFnSX4FGNvA",
-"AIzaSyBnF5GZRBfXFCsYXoy9kCP-fIRGv8aaFoA",
-"AIzaSyC_xH1j5xLCxSBqaEGmf8omm_UnNdLnvf0",
-"AIzaSyDD0rjLqfNZfM1GC9_E9bSdPeZDEyv1GXc"
+const keys = [
+"AIzaSyBUjf6NhE-a_8svWdXSkt3wLn8yWQT8CVw"
 ];
 export default keys
