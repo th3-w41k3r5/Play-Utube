@@ -18,7 +18,7 @@ function SearchResults(props) {
             "url": 'https://www.googleapis.com/youtube/v3/search',
             "params": {
                 'part': 'snippet',
-                'maxResults': '50',
+                'maxResults': '10',
                 'key': generateKey(),
                 'q': query
             }
