@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
+
 import Header from './components/Header'
+import HomePage from './components/Home/HomePage'
 import SearchResults from './components/SearchResults'
 import Player from './components/Player/PlayerComponents/MainPlayer'
 import './App.css';
@@ -26,6 +28,7 @@ function App() {
               <Router>
                 <div>
                   <Header />
+                  <Route path='/' exact component={HomePage} />
                   <Route path='/search=:query' component={SearchResults} />
                   <Route path='/player' component={Player} />
                 </div>

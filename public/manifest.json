@@ -3,9 +3,9 @@
   "name": "Play U-tube by Priyom",
   "icons": [
     {
-      "src": "favicon-16x16.png",
+      "src": "favicon.ico",
       "sizes": "16x16 24x24",
-      "type": "image/png"
+      "type": "image/x-icon"
     },
     {
       "src": "favicon-32x32.png",
