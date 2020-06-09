@@ -117,7 +117,7 @@ margin:1vh 0 0 3vh;
 .songData
   {
     font-family: 'Roboto', sans-serif;
-    padding:3vh 2vh 2vh 5vh;
+    padding:2vh 2vh 2vh 5vh;
     text-align: justify;
   }
 .playPause
@@ -252,6 +252,9 @@ margin:1vh 0 0 3vh;
 }
 /*For Mobiles */ 
 @media screen and (max-width: 1100px) {
+  #playerImage {
+    margin-top: -4vh;
+  }
   .songtitle{
     font-size:14px;
   }

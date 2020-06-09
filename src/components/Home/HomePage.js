@@ -9,27 +9,11 @@ function HomePage() {
     const index = Math.floor(Math.random() * Math.floor(keys.length));
     return keys[index]
   }
-  /*videoCategoryId=10  Music category*/
-  var PlaylistId = {
-    bollywood: 'PL9oqVauEE2LIXtGYECl3wT1f5ae5EwDEZ',
-    hollywood: '',
-    romantic: '',
-    party: '',
-    driving: '',
-    sleeping: '',
-    chill: '',
-    trance: '',
-    rap: ''
+  const randomToken = (tokens) =>{
+    const index = Math.floor(Math.random() * Math.floor(tokens.length));
+    return tokens[index]
   }
-
-  const [songs, setSongs] = useState({
-    popular:[],
-    bollywood:[]
-  })
-  const [popular, setPopular] = useState([])
-  const [bollywood, setBollywood] = useState([])
-  useEffect(() => {
-    //Trending Video
+  const getPopularVideo = () =>{
     axios({
       "method": "GET",
       "url": 'https:www.googleapis.com/youtube/v3/videos',
@@ -49,14 +33,15 @@ function HomePage() {
       .catch((error) => {
         console.log(error)
       })
-    setTimeout(() => { }, 1000);
-
-    //Bolly Wood
+  }
+  const getBollywoodVideo =()=>{
+    var pageToken=['CDIQAA','CDIQAQ','CGQQAA']
     axios({
       "method": "GET",
       "url": 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50',
       "params": {
         'playlistId':PlaylistId.bollywood,
+        'pageToken':randomToken(pageToken),
         'key': generateKey(),
       }
     })
@@ -67,6 +52,29 @@ function HomePage() {
       .catch((error) => {
         console.log(error)
       })
+  }
+  /*videoCategoryId=10  Music category*/
+  var PlaylistId = {
+    bollywood: 'PL9oqVauEE2LIXtGYECl3wT1f5ae5EwDEZ',
+    hollywood: '',
+    romantic: '',
+    party: '',
+    driving: '',
+    sleeping: '',
+    chill: '',
+    trance: '',
+    rap: ''
+  }
+  const [popular, setPopular] = useState([])
+  const [bollywood, setBollywood] = useState([])
+  useEffect(() => {
+    //Popular Video
+    getPopularVideo();
+    
+    setTimeout(() => {}, 1000);
+
+    //Bolly Wood
+    getBollywoodVideo();
       setTimeout(() => {}, 1000);
   }, [])
 
@@ -76,11 +84,9 @@ function HomePage() {
   }, [popular, bollywood]);*/
   return (
     <div> 
-          <Popular popular={popular} />
-          
           <Bollywood bollywood={bollywood} />
 
-          
+          <Popular popular={popular} />
     </div>
   )
 }
