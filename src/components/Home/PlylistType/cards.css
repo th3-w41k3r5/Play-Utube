@@ -1,16 +1,18 @@
 /* Font */
 @import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
 
-/* Design 
+/* Design */
+/*
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }*/
 .cards h1{
-    margin-bottom: -1vh;
-    padding:0 1vh 0 5vh;
+    margin: 0 0 -1vh 0;
     width:100%;
+    text-align:center;
+
 }
 img {
   height: auto;

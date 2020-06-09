@@ -79,7 +79,7 @@ function Player() {
 
       <div className='songData'>
         <span style={{ margin: '0 1vh 0-4vh'}}>Song :&nbsp;</span>
-        <b>{title}</b>
+        <i className="songtitle">{title}</i>
       </div>
       <div className='songData'>
         <span style={{ marginLeft: '-4vh' }}>Channel :&nbsp;</span>

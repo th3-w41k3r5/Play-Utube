@@ -76,9 +76,11 @@ function HomePage() {
   }, [popular, bollywood]);*/
   return (
     <div> 
-          <Bollywood bollywood={bollywood} />
-          {setTimeout(() => {}, 1000)}
           <Popular popular={popular} />
+          
+          <Bollywood bollywood={bollywood} />
+
+          
     </div>
   )
 }

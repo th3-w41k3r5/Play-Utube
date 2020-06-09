@@ -133,8 +133,8 @@ margin:1vh 0 0 3vh;
 .previous
 {
   float:left;
-  width: 10vh;
-  height:10vh;
+  width: 8vh;
+  height:8vh;
   padding-bottom: 5vh;
   margin-left: 10vh;
   cursor: pointer;
@@ -247,8 +247,14 @@ margin:1vh 0 0 3vh;
   height:2vh;
   border-radius: 2px;
 }
+.songtitle{
+  font-size: 2vh;
+}
 /*For Mobiles */ 
 @media screen and (max-width: 1100px) {
+  .songtitle{
+    font-size:14px;
+  }
   input[type=text]:focus {
     width:23vh;
     box-shadow: 0 4px 8px 0 rgba(10, 10, 10, 0.575), 0 6px 20px 0 rgba(165, 152, 152, 0.123);
