@@ -2,6 +2,8 @@ import React from 'react';
 import './cards.css'
 
 function Popular({ popular }) {
+    console.log(popular);
+    
     return (
         <ul className="cards">
             <h1>Trending Songs</h1>
