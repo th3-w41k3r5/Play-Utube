@@ -42,13 +42,13 @@ function HomePage() {
       })
   }
   const getBollywoodVideo =()=>{
-    var pageToken=['CDIQAA','CDIQAQ']
+    //var pageToken=['CDIQAQ','CDIQAA']
     axios({
       "method": "GET",
       "url": 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50',
       "params": {
         'playlistId':PlaylistId.bollywood,
-        'pageToken':randomToken(pageToken),
+        'pageToken':'CDIQAQ',
         'key': generateKey(),
       }
     })
