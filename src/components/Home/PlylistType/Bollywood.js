@@ -2,7 +2,7 @@ import React from 'react'
 import BollywoodCards from './BollywoodCards'
 
 function Bollywood({ bollywood }) {
-    console.log(bollywood);
+
     
     return (
         <ul className="cards">

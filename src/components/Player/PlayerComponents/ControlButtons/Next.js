@@ -1,5 +1,4 @@
 import React, { useState, useContext } from 'react'
-import { Redirect } from 'react-router-dom'
 
 import next from '../../../logo/next.png';
 import { RelatedVideoContext, TitleContext, IdContext, ImageContext, ChannelContext, CurrentIndexContext }
@@ -12,8 +11,6 @@ function Next() {
     const { channel, setChannel } = useContext(ChannelContext);
     const { relatedVideos, setRelatedVideos } = useContext(RelatedVideoContext);
     const { currentSongIndex, setCurrentSongIndex } = useContext(CurrentIndexContext);
-
-    const [player, setPlayer] = useState(false);
 
     const nextPlay = () => {
         var keys = Object.keys(relatedVideos);
@@ -35,8 +32,6 @@ function Next() {
             setId(songId);
             setImage(songImage);
             setChannel(channelTitle);
-
-            setPlayer(true)
         }
     }
 

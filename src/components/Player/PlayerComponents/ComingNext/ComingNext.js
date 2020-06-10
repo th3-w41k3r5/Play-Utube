@@ -36,12 +36,12 @@ function ComingNext() {
 
     }
     return (
-        <div className="comingnext">
+        <div className="comingnext" onClick={scroll}>
             <span className="songlist"><img src={songlist} /></span>
             <div className="container">
                 <h2>Coming Next</h2>
             </div>
-            <span className="related" onClick={scroll}>
+            <span className="related" >
                 {top ? <RelatedBottom /> : <RelatedTop />}
             </span>
             <div className="comingnextHeader" ref={comingnextHeader} style={{ visibility: 'hidden', overflow: 'hidden', paddingTop: '10vh' }}>
