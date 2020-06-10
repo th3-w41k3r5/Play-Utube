@@ -34,6 +34,7 @@ img {
   height:75vh;
   border-radius: 5vh;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 @media (min-width: 33rem) {
