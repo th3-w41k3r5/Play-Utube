@@ -1,4 +1,4 @@
-const keys = [
+/*const keys = [
 "AIzaSyBlpKk7FdjhkIdNDpGJV0zEMMnetElfyak",
 "AIzaSyDgHPem64VQWCItzEx6m0Q3EJD-0mHOvrk",
 "AIzaSyBTXaUEQlsNbAnW5Wk4ZOOHHvJkWo6TsI4",
@@ -39,6 +39,6 @@ const keys = [
 "AIzaSyA6rmZR_h2PFqcJGa47IKD1yGAVPWXoPCk",
 "AIzaSyCgbLzVshoyQyfEprMeS6JkDE_-FeFAtjE",
 "AIzaSyDiK79htXGklhG262qjWwFFC8tEyjjYf9I"
-];
-/*const keys = ["AIzaSyAmWS6D8tZly2DDzmMuv3OLGW5rpS5KjQA","AIzaSyAwkBtlEtR8rtu5ltet6-dkjB4eK63XPBA"]*/
+];*/
+const keys = ["AIzaSyAmWS6D8tZly2DDzmMuv3OLGW5rpS5KjQA","AIzaSyAwkBtlEtR8rtu5ltet6-dkjB4eK63XPBA"]
 export default keys
