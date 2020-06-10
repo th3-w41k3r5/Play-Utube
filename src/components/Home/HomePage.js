@@ -3,8 +3,10 @@ import keys from '../Keys'
 import Popular from './PlylistType/Popular'
 import Bollywood from './PlylistType/Bollywood'
 import axios from 'axios'
+import * as _ from 'underscore'
 
 function HomePage() {
+
   const generateKey = () => {
     const index = Math.floor(Math.random() * Math.floor(keys.length));
     return keys[index]
@@ -13,14 +15,7 @@ function HomePage() {
     const index = Math.floor(Math.random() * Math.floor(tokens.length));
     return tokens[index]
   }
-  const shuffle = (a)=> {
-    for (let i = a.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [a[i], a[j]] = [a[j], a[i]];
-    }
-    console.log("shuffled"+a);
-}
-  const getPopularVideo = () =>{
+  /*const getPopularVideo = () =>{
     axios({
       "method": "GET",
       "url": 'https:www.googleapis.com/youtube/v3/videos',
@@ -40,15 +35,17 @@ function HomePage() {
       .catch((error) => {
         console.log(error)
       })
-  }
+  }*/
   const getBollywoodVideo =()=>{
-    //var pageToken=['CDIQAQ','CDIQAA']
+    var pageToken=['CDIQAQ','CDIQAA','CGQQAA','CJYBEAE','CMgBEAE',
+                  'CGQQAQ','CJYBEAA','CMgBEAA', 'CPoBEAA','CPoBEAE']
+                  
     axios({
       "method": "GET",
       "url": 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50',
       "params": {
         'playlistId':PlaylistId.bollywood,
-        'pageToken':'CDIQAQ',
+        'pageToken':randomToken(pageToken),
         'key': generateKey(),
       }
     })
@@ -59,13 +56,12 @@ function HomePage() {
       .catch((error) => {
         console.log(error)
       })
-      console.log(typeof(bollywood));
       
-      //setBollywood(shuffle(bollywood));
+      //setBollywood(_.shuffle(bollywood)); 
   }
   /*videoCategoryId=10  Music category*/
   var PlaylistId = {
-    bollywood: 'PL9oqVauEE2LIXtGYECl3wT1f5ae5EwDEZ',
+    bollywood: 'PL9TB14hB5MuIqOcHoUal7V7KyqjXQDZHr',
     hollywood: '',
     romantic: '',
     party: '',
@@ -79,8 +75,7 @@ function HomePage() {
   const [bollywood, setBollywood] = useState([])
   useEffect(() => {
     //Popular Video
-    getPopularVideo();
-    
+   // getPopularVideo();    
     setTimeout(() => {}, 1000);
 
     //Bolly Wood
@@ -88,13 +83,14 @@ function HomePage() {
       setTimeout(() => {}, 1000);
   }, [])
 
-  /*useEffect(() => {
-    console.log(popular);
-    console.log(bollywood);
-  }, [popular, bollywood]);*/
+  useEffect(() => {
+   // console.log(popular);
+   /* console.log(bollywood);
+    console.log(typeof(bollywood));*/
+  }, [bollywood]);
   return (
     <div> 
-          <Bollywood bollywood={bollywood} />
+          <Bollywood bollywood={_.shuffle(bollywood)} />
 
           <Popular popular={popular} />
     </div>
