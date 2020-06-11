@@ -4,7 +4,7 @@ import { Redirect } from 'react-router-dom'
 import { TitleContext, IdContext, ImageContext, ChannelContext }
   from '../../VideoContext';
 
-function BollywoodCards({SongImage, SongName, SongId, ChannelTitle}) {
+function SongCards({SongImage, SongName, SongId, ChannelTitle}) {
     const { title, setTitle } = useContext(TitleContext);
     const { id, setId } = useContext(IdContext);
     const { image, setImage } = useContext(ImageContext);
@@ -35,4 +35,4 @@ function BollywoodCards({SongImage, SongName, SongId, ChannelTitle}) {
     )
 }
 
-export default BollywoodCards
+export default SongCards

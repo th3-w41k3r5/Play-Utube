@@ -1,15 +1,16 @@
 import React from 'react'
-import BollywoodCards from './BollywoodCards'
+import SongCards from './SongCards'
+import './cards.css'
 
-function Bollywood({ bollywood }) {
+function Song({ SongsObject,SongType }) {
 
     
     return (
         <ul className="cards">
-            <h1>Top Bollywood Songs</h1>
-            {bollywood.map((post) =>
+            <h1>{SongType}</h1>
+            {SongsObject.map((post) =>
                 <div className="cards_item">
-                    <BollywoodCards 
+                    <SongCards 
                     SongName={post.snippet.title}
                     SongId={post.snippet.resourceId.videoId}
                     SongImage={post.snippet.thumbnails.high.url}
@@ -21,4 +22,4 @@ function Bollywood({ bollywood }) {
     )
 }
 
-export default Bollywood
+export default Song
