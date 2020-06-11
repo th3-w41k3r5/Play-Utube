@@ -73,7 +73,7 @@ function Player() {
         setImage(songImage);
         setChannel(channelTitle);
       }
-    }, 3000);
+    }, 2000);
   }
 
   // Toggle Theme

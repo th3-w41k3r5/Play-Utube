@@ -17,7 +17,8 @@ function HomePage() {
 
   const [songType, setSongType] = useState('Mixed')
   const [result, setResult] = useState([])
-  const playListType = ['Mixed', 'Bollywood', 'Other(error)']
+  const playListType = ['Mixed', 'Hindi', 'English', 'Bengali','MashUp',
+      'Party(Not Available)','Rap(Not Available)','Trance(Not Available)']
 
   const getBollywoodVideo = () => {
     var pageToken = ['CDIQAQ', 'CDIQAA', 'CGQQAA', 'CJYBEAE', 'CMgBEAE',
@@ -62,10 +63,75 @@ function HomePage() {
         console.log(error)
       })
   }
+
+  const getHollywoodVideo = () => {
+    var pageToken = ['CDIQAA','CGQQAA','CDIQAQ','CGQQAQ']
+
+    axios({
+      "method": "GET",
+      "url": 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50',
+      "params": {
+        'playlistId': PlaylistId.hollywood,
+        'pageToken': randomToken(pageToken),
+        'key': generateKey(),
+      }
+    })
+      .then((res) => {
+        setResult(res.data.items)
+      })
+
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  const getTollywoodVideo = () => {
+    var pageToken = ['CDIQAA','CGQQAA','CDIQAQ','CGQQAQ']
+
+    axios({
+      "method": "GET",
+      "url": 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50',
+      "params": {
+        'playlistId': PlaylistId.tollywood,
+        'pageToken': randomToken(pageToken),
+        'key': generateKey(),
+      }
+    })
+      .then((res) => {
+        setResult(res.data.items)
+      })
+
+      .catch((error) => {
+        console.log(error)
+      })
+  }
+
+  const getMashUpVideo = () => {
+    var pageToken = ['CDIQAA','CDIQAQ']
+
+    axios({
+      "method": "GET",
+      "url": 'https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50',
+      "params": {
+        'playlistId': PlaylistId.mashup,
+        'pageToken': randomToken(pageToken),
+        'key': generateKey(),
+      }
+    })
+      .then((res) => {
+        setResult(res.data.items)
+      })
+
+      .catch((error) => {
+        console.log(error)
+      })
+  }
   var PlaylistId = {
     mixed: 'PL9TB14hB5MuKKV-U5e0C4Doy42ntoHYV1',
     bollywood: 'PL9TB14hB5MuIqOcHoUal7V7KyqjXQDZHr',
-    hollywood: '',
+    hollywood: 'PL9TB14hB5MuID7UdW2iU9fnShWLlUdvmL',
+    tollywood:'PL9TB14hB5MuKoESfyKpF-yyB3guygDess',
+    mashup:'PL9TB14hB5MuKMnn2BxdHkcVNMVckmLs60',
     romantic: '',
     party: '',
     driving: '',
@@ -80,9 +146,18 @@ function HomePage() {
     if (songType === 'Mixed') { getMixedVideo(); }
 
     //Bollywood video
-    else if (songType === 'Bollywood') { getBollywoodVideo(); }
+    else if (songType === 'Hindi') { getBollywoodVideo(); }
 
-    else { console.log("error"); }
+    //Hollywood Video
+    else if(songType === 'English'){ getHollywoodVideo(); }
+
+    //Tollywood video
+    else if(songType === 'Bengali'){ getTollywoodVideo();}
+
+    //MashUp video
+    else if(songType === 'MashUp'){ getMashUpVideo();}
+
+    else { alert("Sorry! Not Available..Coming Soon") }
   }, [songType])
   return (
     <div>

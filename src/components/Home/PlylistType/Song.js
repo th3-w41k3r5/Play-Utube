@@ -7,7 +7,7 @@ function Song({ SongsObject,SongType }) {
     
     return (
         <ul className="cards">
-            <h1>{SongType}</h1>
+            <h1>Top {SongType} Songs</h1>
             {SongsObject.map((post) =>
                 <div className="cards_item">
                     <SongCards 
