@@ -83,5 +83,21 @@ const keys = [
 "AIzaSyDbMbnZwJDJVUXGqidRfxJt6sXOckM2ij8",
 "AIzaSyAwN3ABokNJLvf83pH0Zu7bf1S2o9eeKuw",
 
+//playutube 5
+"AIzaSyCFxva6cLVDTrrDdGdsxupd15XKNxuLGZw",
+"AIzaSyBnnPdgVHHnG7sUGzbqdkEsU67ktaxWNiM",
+"AIzaSyBQh1JXkKEK2Nt-gKUjRDY0p2viKiWiFYA",
+"AIzaSyCiw2VvicGz7UgZHIvlHdRgZ-IIPZeHcK4",
+"AIzaSyCnOGw6WhEX50YQk9HQv0ER2rwWuuJ9OAI",
+"AIzaSyDBvKFBDaWhZP11I8e_3Af6ixOqeWDOVOM",
+"AIzaSyB0imqA2QTnnAjSlqydgB17tgrXMWNKx-0",
+"AIzaSyC5MC95EHlMG8XlVcfVB_FKQnU0-rz45M0",
+"AIzaSyBAQpczocCeNyLGd1faDTRDQzWTO45DxWY",
+"AIzaSyBPCUvvefOARcL3aCnrfgRaSc8asU7G3pU",
+"AIzaSyBX_YeAi3RbDOg_fkkLWVmhKgbHvphg5Q4",
+"AIzaSyDb3nPqYM9ycvpkfoGBhMJN-MrmLRdQl-c",
+"AIzaSyA3MPtnO2uzejbFH5Drlu9arLX7klIToKQ",
+"AIzaSyCKNApq4oAlYKNjxkhzFlHn3zSUTwT2Y3E",
+
 ];
 export default keys

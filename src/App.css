@@ -11,7 +11,7 @@
 .header img{
   float:left;
   height:8vh;
-  width:8vh;
+  width:8vh; 
 }
 .header-right {
   float: right;
@@ -94,6 +94,12 @@ height:5vh;
 width: 5vh;
 margin:1vh 0 0 3vh;
 }
+.copyIcon{
+  float:right;
+  height:5vh;
+  width: 5vh;
+  margin:-2vh 3vh 0 0;
+}
 #playerImage
   {
     width:20vh;
@@ -128,8 +134,11 @@ margin:1vh 0 0 3vh;
   width: 8vh;
   height:8vh;
   padding-bottom: 3vh;
-  cursor: pointer;
- 
+  cursor: pointer; 
+}
+#copyURL
+{
+  visibility: hidden;
 }
 .previous
 {
@@ -252,7 +261,10 @@ margin:1vh 0 0 3vh;
   font-size: 2vh;
 }
 .select{
+  border:2px solid rgb(170, 31, 31);
+  border-radius: 5px;
   margin: 2vh 25% 1vh 25%;
+  cursor: pointer;
   width: 50%;
   position: relative;
   height: 8vh;
@@ -260,6 +272,9 @@ margin:1vh 0 0 3vh;
   text-align: center;
   text-align-last: center;
   -moz-text-align-last: center;
+  -webkit-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
 }
 /*For Mobiles */ 
 @media screen and (max-width: 1100px) {
@@ -268,7 +283,7 @@ margin:1vh 0 0 3vh;
     font-size: 3vh;
   }
   #playerImage {
-    margin-top: -4vh;
+    margin-top: -3vh;    
   }
   .songtitle{
     font-size:14px;
@@ -291,6 +306,13 @@ margin:1vh 0 0 3vh;
     height:4vh;
     width: 4vh;
     margin:1vh 0 -1vh 1vh;
+    }
+    .copyIcon
+    {
+    float:right;
+    height:4vh;
+    width: 4vh;
+    margin:-1vh 1vh -1vh -1vh;
     }
     .playPause
     {

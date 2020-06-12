@@ -7,6 +7,8 @@ import Previous from './ControlButtons/Previous'
 import Next from './ControlButtons/Next'
 import Dark from '../ThemeComponents/Dark'
 import Light from '../ThemeComponents/Light'
+import CopyDark from './CopyComponent/CopyDark'
+import CopyLight from './CopyComponent/CopyLight'
 import SeekBar from './SeekBar'
 import { RelatedVideoContext, TitleContext, IdContext, ImageContext, ChannelContext, CurrentIndexContext }
   from '../../VideoContext';
@@ -29,6 +31,18 @@ function Player() {
   const [dark, setDark] = useState(false)
   const [played, setPlayed] = useState(0)
   const [duration, setDuration] = useState(0)
+
+  //copy url
+  const copyUrl =()=>{
+
+  var copyText = document.getElementById("copyURL");
+  copyText.style.visibility='visible'
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+  document.execCommand("copy");
+  copyText.style.visibility='hidden'
+  alert("Link Copied! : " + copyText.value);
+  }
 
   //Play
   const handlePlay = () => {
@@ -95,7 +109,9 @@ function Player() {
         <div onClick={toggleTheme} className="themeIcon">
           {dark ? <Dark /> : <Light />}
         </div>
-
+        <div className="copyIcon" onClick={copyUrl}>
+          {dark ? <CopyDark /> : <CopyLight />}
+        </div>
         <div style={{ 'display': 'none' }}>
           <ReactPlayer ref={musicPlayer} url={url} playing={playing}
             onReady={handlePlay} onEnded={autoNextPlay}
@@ -124,8 +140,8 @@ function Player() {
             {playing ? <Pause /> : <Play />}
           </div>
         </div>
-
       </div>
+    <input type="text" value={url} id="copyURL" />
       <ComingNext />
     </>
   )
