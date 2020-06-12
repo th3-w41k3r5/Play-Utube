@@ -33,15 +33,18 @@ function Player() {
   const [duration, setDuration] = useState(0)
 
   //copy url
-  const copyUrl =()=>{
+  const copyUrl = () => {
 
-  var copyText = document.getElementById("copyURL");
-  copyText.style.visibility='visible'
-  copyText.select();
-  copyText.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-  copyText.style.visibility='hidden'
-  alert("Link Copied! : " + copyText.value);
+    var copyText = document.getElementById("copyURL");
+    copyText.style.visibility = 'visible'
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+    document.execCommand("copy");
+    copyText.style.visibility = 'hidden'
+    var x = document.getElementById("snackbar");
+    x.className = "show";
+    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+
   }
 
   //Play
@@ -49,7 +52,7 @@ function Player() {
     setPlaying(true)
     setRotate(true)
   }
-  
+
   //Pause
   const handlePause = () => {
     setPlaying(false)
@@ -141,7 +144,8 @@ function Player() {
           </div>
         </div>
       </div>
-    <input type="text" value={url} id="copyURL" />
+      <input type="text" value={url} id="copyURL" />
+      <div id="snackbar">Copied!</div>
       <ComingNext />
     </>
   )

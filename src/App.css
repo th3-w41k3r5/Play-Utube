@@ -108,6 +108,7 @@ margin:1vh 0 0 3vh;
     display:block;
     margin:auto;
     margin-top:5vh;
+    left: 1vh;
   }
   .rotate{
     animation: rotation 10s infinite linear;
@@ -306,6 +307,7 @@ box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
     height:4vh;
     width: 4vh;
     margin:1vh 0 -1vh 1vh;
+    cursor: pointer;
     }
     .copyIcon
     {
@@ -313,6 +315,7 @@ box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
     height:4vh;
     width: 4vh;
     margin:-1vh 1vh -1vh -1vh;
+    cursor: pointer;
     }
     .playPause
     {
@@ -348,4 +351,49 @@ box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
     .relatedCardsContainer
     {margin:1vh 2.5% 0 2.5%;}
 
+}
+#snackbar {
+  visibility: hidden;
+  min-width: 200px;
+  margin-left: -125px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 16px;
+  position: fixed;
+  z-index: 1;
+  left: 50%;
+  bottom: 30px;
+  font-size: 3vh;
+  -moz-text-align-last: center;
+  -webkit-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 24px 0px rgba(0,0,0,0.75);
+}
+
+#snackbar.show {
+  visibility: visible;
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;} 
+  to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+  from {bottom: 30px; opacity: 1;} 
+  to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+  from {bottom: 30px; opacity: 1;}
+  to {bottom: 0; opacity: 0;}
 }

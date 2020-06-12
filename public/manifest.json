@@ -24,6 +24,9 @@
       "type": "image/png"
     }
   ],
+  "background": {
+    "scripts": ["./src/components/Player/PlayerComponents/MainPlayer.js"]
+  },
   "start_url": ".",
   "display": "standalone",
   "theme_color": "white",
