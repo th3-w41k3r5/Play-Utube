@@ -40,7 +40,7 @@ function Player() {
     copyText.select();
     copyText.setSelectionRange(0, 99999);
     document.execCommand("copy");
-    copyText.style.visibility = 'hidden'
+    //copyText.style.visibility = 'hidden'
     var x = document.getElementById("snackbar");
     x.className = "show";
     setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
@@ -144,7 +144,7 @@ function Player() {
           </div>
         </div>
       </div>
-      <input type="text" value={url} id="copyURL" />
+      <input type="text" value={url} id="copyURL" readOnly/>
       <div id="snackbar">Copied!</div>
       <ComingNext />
     </>

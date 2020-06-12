@@ -108,7 +108,7 @@ margin:1vh 0 0 3vh;
     display:block;
     margin:auto;
     margin-top:5vh;
-    left: 1vh;
+    padding-left: 1vh;
   }
   .rotate{
     animation: rotation 10s infinite linear;
