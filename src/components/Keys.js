@@ -1,5 +1,4 @@
 const keys = [
-'API KEY 1',
-'API KEY 2, 
+    "AIzaSyAQXwNhw6j31jicqMb-fdyJ2g_mAlP-sJs"
 ];
 export default keys
