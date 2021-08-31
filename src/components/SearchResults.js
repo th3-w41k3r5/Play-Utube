@@ -8,7 +8,6 @@ function SearchResults(props) {
     const index = Math.floor(Math.random() * Math.floor(keys.length));
     return keys[index];
   };
-
   const query = props.match.params.query;
   const [posts, setPosts] = useState([]);
   useEffect(() => {
